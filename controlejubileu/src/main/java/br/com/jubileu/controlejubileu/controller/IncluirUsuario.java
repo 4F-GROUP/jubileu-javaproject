@@ -7,6 +7,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import br.com.jubileu.controlejubileu.model.dao.UsuarioDao;
+import br.com.jubileu.controlejubileu.model.entidade.Usuario;
+
 /**
  * Servlet implementation class IncluirUsuario
  */
@@ -34,7 +37,20 @@ public class IncluirUsuario extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String login = request.getParameter("login_usuario");
+		String senha = request.getParameter("senha_usuario");
+		String nome = request.getParameter("nome_usuario");
+		String email = request.getParameter("email_usuario");
+		
+		Usuario u = new Usuario();
+		u.setLogin(login);
+		u.setSenha(senha);
+		u.setNome(nome);
+		u.setEmail(email);
+		
+		UsuarioDao dao = new UsuarioDao();
+		boolean retorno = dao.incluir(u);
+		response.sendRedirect("lista_usuario.jsp");
 	}
 
 }
