@@ -7,6 +7,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import br.com.jubileu.controlejubileu.model.dao.UsuarioDao;
+import br.com.jubileu.controlejubileu.model.entidade.Usuario;
+
 /**
  * Servlet implementation class AlterarUsuario
  */
@@ -34,7 +37,23 @@ public class AlterarUsuario extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		Long cod_usuario = Long.parseLong(request.getParameter("id"));
+		String login = request.getParameter("login");
+		String senha = request.getParameter("senha");
+		String nome = request.getParameter("nome");
+		String email = request.getParameter("email");
+		
+		
+		Usuario u = new Usuario();
+		u.setCod_usuario(cod_usuario);
+		u.setLogin(login);
+		u.setSenha(senha);
+		u.setNome(nome);
+		u.setEmail(email);
+		
+		UsuarioDao dao = new UsuarioDao();
+		boolean retorno = dao.alterar(u);
+		response.sendRedirect("lista_usuario.jsp");
 	}
 
 }

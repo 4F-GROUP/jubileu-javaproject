@@ -11,7 +11,7 @@ public class UsuarioDao extends Conexao{
 	
 	public boolean incluir(Usuario usuario) {
 		boolean ok = false;
-		String sql = "insert into usuario (login, senha, nome, email) values (?,?,?,?)";
+		String sql = "insert into usuario (cod_usuario, login, senha, nome, email) values (?,?,?,?,?)";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
 			ps.setLong(1, usuario.getCod_usuario());
@@ -54,12 +54,12 @@ public class UsuarioDao extends Conexao{
 		return lista;
 	}
 	
-	public Usuario buscar(long cod_usuario) {
+	public Usuario buscar(long id) {
 		Usuario u = null;
 		String sql = "select * from usuario where cod_usuario = ?";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
-			ps.setLong(1, cod_usuario);
+			ps.setLong(1, id);
 			ResultSet rs = ps.executeQuery();
 			if(rs.next()) {
 				u = new Usuario();
@@ -79,14 +79,14 @@ public class UsuarioDao extends Conexao{
 	
 	public boolean alterar(Usuario u) {
 		boolean ok = true;
-		String sql = "update usuario set login = ?, senha = ?, nome = ? , email = ? where cod_usuario = ?";
+		String sql = "update usuario set  login = ?, senha = ?, nome = ? , email = ? where cod_usuario = ?";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
-			ps.setLong(1, u.getCod_usuario());
-			ps.setString(2, u.getLogin());
-			ps.setString(3, u.getSenha());
-			ps.setString(4, u.getNome());
-			ps.setString(5, u.getEmail());
+			ps.setString(1, u.getLogin());
+			ps.setString(2, u.getSenha());
+			ps.setString(3, u.getNome());
+			ps.setString(4, u.getEmail());
+			ps.setLong(5, u.getCod_usuario());
 			ps.execute();
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -97,12 +97,12 @@ public class UsuarioDao extends Conexao{
 		return ok;
 	}
 	
-	public boolean excluir(long cod_usuario) {
+	public boolean excluir(long id) {
 		boolean ok = true;
 		String sql = "delete from usuario where cod_usuario = ?";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
-			ps.setLong(1, cod_usuario);
+			ps.setLong(1, id);
 			ok = ps.execute();
 		} catch(Exception e) {
 			ok = false;

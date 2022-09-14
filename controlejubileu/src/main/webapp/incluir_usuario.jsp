@@ -10,13 +10,15 @@
 	<a href="lista_usuario.jsp">Voltar a página anterior</a>
 	<h1>Formulário de Cadastro</h1>
 	<form method="post" action="IncluirUsuario">
-		<input type="text" name="login_usuario" placeholder="Login" required>
+		<input type="number" name="cod_usuario" placeholder="Código" required>
 		<br>
-		<input type="password" name="senha_usuario" placeholder="Senha" required>
+		<input type="text" name="login" placeholder="Login" required>
 		<br>
-		<input type="text" name="nome_usuario" placeholder="Nome Completo" required>
+		<input type="password" name="senha" placeholder="Senha" required>
 		<br>
-		<input type="email" name="email_usuario" placeholder="Email" required>
+		<input type="text" name="nome" placeholder="Nome Completo" required>
+		<br>
+		<input type="email" name="email" placeholder="Email" required>
 		<br>
 		<input type="submit" value="Ok">
 		<input type="reset" value="Limpar">

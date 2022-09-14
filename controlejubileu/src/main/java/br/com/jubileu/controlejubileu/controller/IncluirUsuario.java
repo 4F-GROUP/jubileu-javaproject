@@ -37,12 +37,14 @@ public class IncluirUsuario extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String login = request.getParameter("login_usuario");
-		String senha = request.getParameter("senha_usuario");
-		String nome = request.getParameter("nome_usuario");
-		String email = request.getParameter("email_usuario");
+		Long cod_usuario = Long.parseLong(request.getParameter("cod_usuario"));
+		String login = request.getParameter("login");
+		String senha = request.getParameter("senha");
+		String nome = request.getParameter("nome");
+		String email = request.getParameter("email");
 		
 		Usuario u = new Usuario();
+		u.setCod_usuario(cod_usuario);
 		u.setLogin(login);
 		u.setSenha(senha);
 		u.setNome(nome);

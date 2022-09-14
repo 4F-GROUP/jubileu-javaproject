@@ -7,6 +7,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import br.com.jubileu.controlejubileu.model.dao.UsuarioDao;
+
 /**
  * Servlet implementation class ExcluirUsuario
  */
@@ -26,7 +28,16 @@ public class ExcluirUsuario extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		long id = 0;
+		try {
+			id = Long.parseLong(request.getParameter("id"));
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		UsuarioDao dao = new UsuarioDao();
+		boolean retorno = dao.excluir(id);
+		response.sendRedirect("lista_usuario.jsp");
 	}
 
 	/**
