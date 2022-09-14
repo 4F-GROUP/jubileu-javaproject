@@ -31,7 +31,7 @@ public class UsuarioDao extends Conexao{
 	
 	public List<Usuario> listar(String nomeBusca){
 		ArrayList<Usuario> lista = new ArrayList<Usuario>();
-		String sql = "select * from usuario where cod_usuario like ? order by cod_usuario";
+		String sql = "select * from usuario where nome like ? order by nome";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
 			ps.setString(1, "%"+nomeBusca+"%");
@@ -44,6 +44,7 @@ public class UsuarioDao extends Conexao{
 				u.setSenha(rs.getString("senha"));
 				u.setNome(rs.getString("nome"));
 				u.setEmail(rs.getString("email"));
+				lista.add(u);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
