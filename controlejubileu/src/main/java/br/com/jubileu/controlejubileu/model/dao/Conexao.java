@@ -15,10 +15,10 @@ public class Conexao {
     return this.conn;
   }
   public void fecharConexao() {
-    try {
-      this.conn.close();
-    } catch (Exception e) {
+	  try {
+		  this.conn.close();
+	  } catch (Exception e) {
       
-    }
+	  }
   }
 }

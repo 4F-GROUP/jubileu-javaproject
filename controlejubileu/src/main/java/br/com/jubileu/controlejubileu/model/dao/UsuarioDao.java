@@ -11,7 +11,7 @@ public class UsuarioDao extends Conexao{
 	
 	public boolean incluir(Usuario usuario) {
 		boolean ok = false;
-		String sql = "insert into usuario (cod_usuario, login, senha, nome, email) values (?,?,?,?,?)";
+		String sql = "insert into usuario (login, senha, nome, email) values (?,?,?,?)";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
 			ps.setLong(1, usuario.getCod_usuario());
@@ -53,12 +53,12 @@ public class UsuarioDao extends Conexao{
 		return lista;
 	}
 	
-	public Usuario buscar(long id) {
+	public Usuario buscar(long cod_usuario) {
 		Usuario u = null;
 		String sql = "select * from usuario where cod_usuario = ?";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
-			ps.setLong(1, id);
+			ps.setLong(1, cod_usuario);
 			ResultSet rs = ps.executeQuery();
 			if(rs.next()) {
 				u = new Usuario();
@@ -96,12 +96,12 @@ public class UsuarioDao extends Conexao{
 		return ok;
 	}
 	
-	public boolean excluir(long id) {
+	public boolean excluir(long cod_usuario) {
 		boolean ok = true;
 		String sql = "delete from usuario where cod_usuario = ?";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
-			ps.setLong(1, id);
+			ps.setLong(1, cod_usuario);
 			ok = ps.execute();
 		} catch(Exception e) {
 			ok = false;
