@@ -7,6 +7,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import br.com.jubileu.controlejubileu.model.dao.FornecedorDao;
+import br.com.jubileu.controlejubileu.model.entidade.Fornecedor;
+
 /**
  * Servlet implementation class IncluirFornecedor
  */
@@ -34,7 +37,37 @@ public class IncluirFornecedor extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		Long cod_fornecedor = Long.parseLong(request.getParameter("cod_fornecedor"));
+		String razaoSocial = request.getParameter("razao_social");
+		String nomeFantasia = request.getParameter("nome_fantasia");
+		Long cnpj = Long.parseLong(request.getParameter("cnpj"));
+		String endereco = request.getParameter("endereco");
+		Long numero = Long.parseLong(request.getParameter("numero"));
+		String complemento = request.getParameter("complemento");
+		String bairro = request.getParameter("bairro");
+		Long cep = Long.parseLong(request.getParameter("cep"));
+		String cidade = request.getParameter("cidade");
+		String estado = request.getParameter("estado");
+		String telefone = request.getParameter("telefone");
+
+		
+		Fornecedor f = new Fornecedor();
+		f.setCod_fornecedor(cod_fornecedor);
+		f.setRazao_social(razaoSocial);
+		f.setNome_fantasia(nomeFantasia);
+		f.setCnpj(cnpj);
+		f.setEndereco(endereco);
+		f.setNumero(numero);
+		f.setComplemento(complemento);
+		f.setBairro(bairro);
+		f.setCep(cep);
+		f.setCidade(cidade);
+		f.setEstado(estado);
+		f.setTelefone(telefone);
+		
+		FornecedorDao dao = new FornecedorDao();
+		boolean retorno = dao.incluir(f);
+		response.sendRedirect("lista_fornecedor.jsp");
 	}
 
 }

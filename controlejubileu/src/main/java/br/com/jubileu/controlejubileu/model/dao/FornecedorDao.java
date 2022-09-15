@@ -102,18 +102,18 @@ public class FornecedorDao extends Conexao{
 		String sql = "update loja set razao_social = ?, nome_fantasia = ?, cnpj = ?, endereco = ?, numero = ?, complemento = ?, bairro = ?, cep = ?, cidade = ?, estado = ? where cod_fornecedor = ?";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
-			ps.setLong(1, f.getCod_fornecedor());
-			ps.setString(2, f.getRazao_social());
-			ps.setString(3, f.getNome_fantasia());
-			ps.setLong(4, f.getCnpj());
-			ps.setString(5, f.getEndereco());
-			ps.setLong(6, f.getNumero());
-			ps.setString(7, f.getComplemento());
-			ps.setString(8, f.getBairro());
-			ps.setLong(9, f.getCep());
-			ps.setString(10, f.getCidade());
-			ps.setString(11, f.getEstado());
-			ps.setString(12, f.getTelefone());
+			ps.setString(1, f.getRazao_social());
+			ps.setString(2, f.getNome_fantasia());
+			ps.setLong(3, f.getCnpj());
+			ps.setString(4, f.getEndereco());
+			ps.setLong(5, f.getNumero());
+			ps.setString(6, f.getComplemento());
+			ps.setString(7, f.getBairro());
+			ps.setLong(8, f.getCep());
+			ps.setString(9, f.getCidade());
+			ps.setString(10, f.getEstado());
+			ps.setString(11, f.getTelefone());
+			ps.setLong(12, f.getCod_fornecedor());
 			ps.execute();
 		} catch(Exception e) {
 			e.printStackTrace();

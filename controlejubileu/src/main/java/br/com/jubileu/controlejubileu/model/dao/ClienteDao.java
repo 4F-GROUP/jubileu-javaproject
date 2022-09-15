@@ -110,20 +110,20 @@ public class ClienteDao extends Conexao{
 		String sql = "update cliente set nome = ?, endereco =?, numero =?, complemento = ?, bairro = ?, cep =?, cidade = ?, estado = ?, telefone = ?, email = ?, cpf = ?, login = ?, senha = ? where cod_cliente = ?"; 
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
-			ps.setLong(1, c.getCod_cliente());
-			ps.setString(2, c.getNome());
-			ps.setString(3, c.getEndereco());
-			ps.setLong(4, c.getNumero());
-			ps.setString(5, c.getComplemento()); 
-			ps.setString(6, c.getBairro()); 
-			ps.setLong(7, c.getCep()); 
-			ps.setString(8, c.getCidade()); 
-			ps.setString(9, c.getEstado()); 
-			ps.setString(10, c.getTelefone()); 
-			ps.setString(11, c.getEmail());
-			ps.setLong(12, c.getCpf()); 
-			ps.setString(13, c.getLogin());
-			ps.setString(14, c.getSenha());
+			ps.setString(1, c.getNome());
+			ps.setString(2, c.getEndereco());
+			ps.setLong(3, c.getNumero());
+			ps.setString(4, c.getComplemento()); 
+			ps.setString(5, c.getBairro()); 
+			ps.setLong(6, c.getCep()); 
+			ps.setString(7, c.getCidade()); 
+			ps.setString(8, c.getEstado()); 
+			ps.setString(9, c.getTelefone()); 
+			ps.setString(10, c.getEmail());
+			ps.setLong(11, c.getCpf()); 
+			ps.setString(12, c.getLogin());
+			ps.setString(13, c.getSenha());
+			ps.setLong(14, c.getCod_cliente());
 			ps.execute();
 		} catch(Exception e) {
 			e.printStackTrace();

@@ -15,7 +15,7 @@
 		Fornecedor fornecedor = (Fornecedor) request.getAttribute("fornecedor");
 	%>
 	<form method="post" action="AlterarFornecedor">
-		<input type="hidden" name="cod_fornecedor" value="<%= fornecedor.getCod_fornecedor() %>" placeholder="Código" required>
+		<input type="hidden" name="id" value="<%= fornecedor.getCod_fornecedor() %>">
 		<br>
 		<input type="text" name="razao_social" value="<%= fornecedor.getRazao_social() %>" placeholder="Razao Social" required>
 		<br>

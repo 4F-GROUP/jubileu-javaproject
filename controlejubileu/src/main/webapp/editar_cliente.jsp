@@ -14,14 +14,14 @@
 	<% 
 		Cliente cliente = (Cliente) request.getAttribute("cliente");
 	%>
-	<form method="post" action="AlterarUsuario" >
+	<form method="post" action="AlterarCliente" >
 		<input type="hidden" name="id" value="<%= cliente.getCod_cliente() %>">
 		<br>
 		<input type="text" name="nome" value="<%= cliente.getNome() %>" placeholder="Nome Completo" required>
 		<br>
 		<input type="text" name="endereco" value="<%= cliente.getEndereco() %>" placeholder="Endereço" required>
 		<br>
-		<input type="number" name="numero" value="<%= cliente.getNumero() %>" placeholder="Numero" required>
+		<input type="number" name="numero" value="<%= cliente.getNumero() %>" placeholder="Número" required>
 		<br>
 		<input type="text" name="complemento" value="<%= cliente.getComplemento() %>" placeholder="Complemento" required>
 		<br>

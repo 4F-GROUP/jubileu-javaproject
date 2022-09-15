@@ -31,7 +31,7 @@ public class UsuarioDao extends Conexao{
 	
 	public List<Usuario> listar(String nomeBusca){
 		ArrayList<Usuario> lista = new ArrayList<Usuario>();
-		String sql = "select * from usuario where nome like ? order by nome";
+		String sql = "select * from usuario where cod_usuario like ? order by cod_usuario";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
 			ps.setString(1, "%"+nomeBusca+"%");
