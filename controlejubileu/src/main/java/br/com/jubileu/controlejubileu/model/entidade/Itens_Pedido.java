@@ -1,7 +1,7 @@
 package br.com.jubileu.controlejubileu.model.entidade;
 
 public class Itens_Pedido {
-	private long cod_pedido;
+	private Pedido cod_pedido;
 	private Produto cod_produto;
 	private long quantidade;
 	private double valor;
@@ -9,14 +9,14 @@ public class Itens_Pedido {
 	
 	public Itens_Pedido() {
 		super();
-		this.cod_pedido = 0;
+		this.cod_pedido = new Pedido();
 		this.cod_produto = new Produto();
 		this.quantidade = 0;
 		this.valor = 0.0;
 		this.desconto = 0.0;
 	}
 
-	public Itens_Pedido(long cod_pedido, Produto cod_produto, long quantidade, double valor, double desconto) {
+	public Itens_Pedido(Pedido cod_pedido, Produto cod_produto, long quantidade, double valor, double desconto) {
 		super();
 		this.cod_pedido = cod_pedido;
 		this.cod_produto = cod_produto;
@@ -25,11 +25,11 @@ public class Itens_Pedido {
 		this.desconto = desconto;
 	}
 
-	public long getCod_pedido() {
+	public Pedido getCod_pedido() {
 		return cod_pedido;
 	}
 
-	public void setCod_pedido(long cod_pedido) {
+	public void setCod_pedido(Pedido cod_pedido) {
 		this.cod_pedido = cod_pedido;
 	}
 

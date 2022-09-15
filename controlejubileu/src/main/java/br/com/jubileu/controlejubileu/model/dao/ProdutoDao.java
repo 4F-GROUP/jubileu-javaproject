@@ -103,7 +103,7 @@ public class ProdutoDao extends Conexao {
 				p.setEstoque(rs.getLong("estoque"));
 			}
 		}catch (Exception e) {
-			
+			e.printStackTrace();
 		} finally {
 			fecharConexao();
 		}
