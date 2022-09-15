@@ -34,7 +34,7 @@ public class IniciarAlterarFornecedor extends HttpServlet {
 		try {
 			id = Long.parseLong(request.getParameter("id"));
 		} catch (Exception e) {
-			
+			e.printStackTrace();
 		}
 		
 		FornecedorDao dao = new FornecedorDao();

@@ -23,49 +23,49 @@
 			Fornecedor fornecedor = (Fornecedor) request.getAttribute("fornecedor");
 		%>
 		<form method="post" action="AlterarFornecedor">
-			<input type="hidden" name="id" value="<%= fornecedor.getCod_fornecedor() %>">
+			<input type="text" name="id" value="<%= fornecedor.getCod_fornecedor() %>" readonly>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Exemplo Ltda</span>
 				<input class="form-control" type="text" name="razao_social" value="<%= fornecedor.getRazao_social() %>" placeholder="Razão Social" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Exemplo</span>
 				<input class="form-control" type="text" name="nome_fantasia" value="<%= fornecedor.getNome_fantasia() %>"  placeholder="Nome Fantasia" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">123</span>
 				<input class="form-control" type="number" name="cnpj" value="<%= fornecedor.getCnpj() %>" placeholder="CNPJ" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Rua Feira</span>
 				<input class="form-control" type="text" name="endereco" value="<%= fornecedor.getEndereco() %>" placeholder="Endereço" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">123</span>
 				<input class="form-control" type="number" name="numero"  value="<%= fornecedor.getNumero() %>"placeholder="Número" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Quadra B</span>
 				<input class="form-control" type="text" name="complemento" value="<%= fornecedor.getComplemento() %>" placeholder="Complemento" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Bairro</span>
 				<input class="form-control" type="text" name="bairro"  value="<%= fornecedor.getBairro() %>" placeholder="Bairro" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">123</span>
 				<input class="form-control" type="number" name="cep" value="<%= fornecedor.getCep() %>" placeholder="CEP" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
-				<input class="form-control" type="text" name="bairro" value="<%= fornecedor.getCidade() %>" placeholder="Bairro" required>
+				<span class="input-group-text">Cidade</span>
+				<input class="form-control" type="text" name="cidade" value="<%= fornecedor.getCidade() %>" placeholder="Cidade" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Estado</span>
 				<input class="form-control" type="text" name="estado"  value="<%= fornecedor.getEstado() %>" placeholder="Estado" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Telefone</span>
 				<input class="form-control" type="text" name="telefone" value="<%= fornecedor.getTelefone() %>" placeholder="Telefone" required>
 			</div>
 			<div class="my-2">

@@ -56,7 +56,7 @@
 			</div>
 			<div class="input-group my-2">
 				<span class="input-group-text"></span>
-				<input class="form-control" type="text" name="bairro" placeholder="Bairro" required>
+				<input class="form-control" type="text" name="cidade" placeholder="Cidade" required>
 			</div>
 			<div class="input-group my-2">
 				<span class="input-group-text"></span>

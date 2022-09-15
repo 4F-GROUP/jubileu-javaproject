@@ -99,7 +99,7 @@ public class FornecedorDao extends Conexao{
 	
 	public boolean alterar(Fornecedor f) {
 		boolean ok = true;
-		String sql = "update loja set razao_social = ?, nome_fantasia = ?, cnpj = ?, endereco = ?, numero = ?, complemento = ?, bairro = ?, cep = ?, cidade = ?, estado = ? where cod_fornecedor = ?";
+		String sql = "update fornecedor set razao_social = ?, nome_fantasia = ?, cnpj = ?, endereco = ?, numero = ?, complemento = ?, bairro = ?, cep = ?, cidade = ?, estado = ?, telefone = ? where cod_fornecedor = ?";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
 			ps.setString(1, f.getRazao_social());

@@ -18,7 +18,7 @@
 				<a href="#" class=" col align-self-center"></a>
 				<a href="#" class=" col align-self-center"></a>
 				<a href="#" class=" col align-self-center"></a>
-				<a href="incluir_fornecedor.jsp" class="btn btn-primary text-decoration none link-light col align-self-end">Cadastro de Clientes</a>
+				<a href="incluir_fornecedor.jsp" class="btn btn-primary text-decoration none link-light col align-self-end">Cadastro de Fornecedores</a>
 			</div>
 		<h1 class="display-5 my-2">Consultar os Fornecedores</h1>
 		<%

@@ -37,7 +37,7 @@ public class AlterarFornecedor extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Long cod_fornecedor = Long.parseLong(request.getParameter("cod_fornecedor"));
+		Long cod_fornecedor= Long.parseLong(request.getParameter("id"));
 		String razaoSocial = request.getParameter("razao_social");
 		String nomeFantasia = request.getParameter("nome_fantasia");
 		Long cnpj = Long.parseLong(request.getParameter("cnpj"));
@@ -66,7 +66,7 @@ public class AlterarFornecedor extends HttpServlet {
 		f.setTelefone(telefone);
 		
 		FornecedorDao dao = new FornecedorDao();
-		boolean retorno = dao.incluir(f);
+		boolean retorno = dao.alterar(f);
 		response.sendRedirect("lista_fornecedor.jsp");
 	}
 
