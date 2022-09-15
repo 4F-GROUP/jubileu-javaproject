@@ -4,17 +4,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home Jubileu</title>
+<title>Jubileu</title>
 </head>
 <body>
 	<h1>Em construção...</h1>
 	<br>
 	<a href="lista_usuario.jsp">Formulário Usuario</a>
 	<br>
-	<a href="#">Formulário Cliente</a>
+	<a href="lista_cliente.jsp">Formulário Cliente</a>
 	<br>
 	<a href="lista_fornecedor.jsp">Formulário Fornecedor</a>
 	<br>
-	<a href="#">Formulário Produto</a>
+	<a href="lista_produto.jsp">Formulário Produto</a>
 </body>
 </html>

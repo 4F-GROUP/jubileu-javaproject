@@ -89,4 +89,44 @@
     <servlet-name>IniciarAlterarUsuario</servlet-name>
     <url-pattern>/IniciarAlterarUsuario</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AlterarFornecedor</display-name>
+    <servlet-name>AlterarFornecedor</servlet-name>
+    <servlet-class>br.com.jubileu.controlejubileu.controller.AlterarFornecedor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AlterarFornecedor</servlet-name>
+    <url-pattern>/AlterarFornecedor</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ExcluirFornecedor</display-name>
+    <servlet-name>ExcluirFornecedor</servlet-name>
+    <servlet-class>br.com.jubileu.controlejubileu.controller.ExcluirFornecedor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExcluirFornecedor</servlet-name>
+    <url-pattern>/ExcluirFornecedor</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>IncluirFornecedor</display-name>
+    <servlet-name>IncluirFornecedor</servlet-name>
+    <servlet-class>br.com.jubileu.controlejubileu.controller.IncluirFornecedor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IncluirFornecedor</servlet-name>
+    <url-pattern>/IncluirFornecedor</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>IniciarAlterarFornecedor</display-name>
+    <servlet-name>IniciarAlterarFornecedor</servlet-name>
+    <servlet-class>br.com.jubileu.controlejubileu.controller.IniciarAlterarFornecedor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IniciarAlterarFornecedor</servlet-name>
+    <url-pattern>/IniciarAlterarFornecedor</url-pattern>
+  </servlet-mapping>
 </web-app>

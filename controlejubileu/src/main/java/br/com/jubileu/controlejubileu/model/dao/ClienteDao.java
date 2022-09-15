@@ -63,6 +63,7 @@ public class ClienteDao extends Conexao{
 				c.setCpf(rs.getLong("cpf"));
 				c.setLogin(rs.getString("login"));
 				c.setSenha(rs.getString("senha"));
+				lista.add(c);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

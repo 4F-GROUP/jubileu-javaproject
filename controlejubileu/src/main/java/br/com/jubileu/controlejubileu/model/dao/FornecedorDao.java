@@ -57,6 +57,7 @@ public class FornecedorDao extends Conexao{
 				f.setCidade(rs.getString("cidade"));
 				f.setEstado(rs.getString("estado"));
 				f.setTelefone(rs.getString("telefone"));
+				lista.add(f);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
