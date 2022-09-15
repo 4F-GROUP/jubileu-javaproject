@@ -37,7 +37,7 @@
 					</div>
 				</form>
 			</div>
-		<table>
+		<table class="table table-hover">
 			<thead>
 				<tr>
 					<th>Código</th>
@@ -75,8 +75,8 @@
 					<td><%= f.getEstado() %></td>
 					<td><%= f.getTelefone() %></td>
 					<td>
-						<a href="IniciarAlterarFornecedor?id=<%= f.getCod_fornecedor()%>">Alterar</a> 
-						<a href="ExcluirFornecedor?id=<%= f.getCod_fornecedor()%>" onclick="return confirm('Deseja realmente excluir esse registro?');">Excluir</a>
+						<a class="btn btn-primary btn-sm text-decoration none link-light" href="IniciarAlterarFornecedor?id=<%= f.getCod_fornecedor()%>">Alterar</a> 
+						<a class="btn btn-primary btn-sm text-decoration none link-light" href="ExcluirFornecedor?id=<%= f.getCod_fornecedor()%>" onclick="return confirm('Deseja realmente excluir esse registro?');">Excluir</a>
 					</td>
 				</tr>
 				<% } %>

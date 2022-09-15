@@ -18,36 +18,66 @@
 			</div>
 			<h1 class="display-5 my-2">Formulário de Cadastro</h1>
 			<form method="post" action="IncluirCliente">
-				<input type="number" name="cod_cliente" placeholder="Código" required>
-				<br>
-				<input type="text" name="nome" placeholder="Nome Completo" required>
-				<br>
-				<input type="text" name="endereco" placeholder="Endereço" required>
-				<br>
-				<input type="number" name="numero" placeholder="Numero" required>
-				<br>
-				<input type="text" name="complemento" placeholder="Complemento" required>
-				<br>
-				<input type="text" name="bairro" placeholder="Bairro" required>
-				<br>
-				<input type="number" name="cep" placeholder="CEP" required>
-				<br>
-				<input type="text" name="cidade" placeholder="Cidade" required>
-				<br>
-				<input type="text" name="estado" placeholder="Estado" required>
-				<br>
-				<input type="text" name="telefone" placeholder="Telefone" required>
-				<br>
-				<input type="text" name="email" placeholder="Email" required>
-				<br>
-				<input type="number" name="cpf" placeholder="CPF" required>
-				<br>
-				<input type="text" name="login" placeholder="Login" required>
-				<br>
-				<input type="password" name="senha" placeholder="Senha" required>
-				<br>
-				<input type="submit" value="Ok">
-				<input type="reset" value="Limpar">
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="number" name="cod_cliente" placeholder="Código" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control"type="text" name="nome" placeholder="Nome" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="text" name="endereco" placeholder="Endereço" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="number" name="numero" placeholder="Número" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="text" name="complemento" placeholder="Complemento" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="text" name="bairro" placeholder="Bairro" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="number" name="cep" placeholder="CEP" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="text" name="cidade" placeholder="Cidade" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="text" name="estado" placeholder="Estado" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control"type="text" name="telefone" placeholder="Telefone" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="text" name="email" placeholder="Email" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control" type="number" name="cpf" placeholder="CPF" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control"type="text" name="login" placeholder="Login" required>
+				</div>
+				<div class="input-group my-2">
+					<span class="input-group-text"></span>
+					<input class="form-control"type="password" name="senha" placeholder="Senha" required>
+				</div>
+				<div class="my-2">
+					<input class="btn btn-primary  text-decoration none link-light" type="submit" value="Ok">
+					<input class="btn btn-primary  text-decoration none link-light" type="reset" value="Limpar">
+				</div>
 			</form>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

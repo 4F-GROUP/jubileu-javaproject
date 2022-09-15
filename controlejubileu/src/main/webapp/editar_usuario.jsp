@@ -25,16 +25,26 @@
 		<form method="post" action="AlterarUsuario" >
 			<input type="hidden" name="id" value="<%= usuario.getCod_usuario() %>">
 			<br>
-			<input type="text" name="login" value="<%= usuario.getLogin() %>" placeholder="Login" required>
-			<br>
-			<input type="password" name="senha" value="<%= usuario.getSenha() %>" placeholder="Senha" required>
-			<br>
-			<input type="text" name="nome" value="<%= usuario.getNome() %>" placeholder="Nome" required>
-			<br>
-			<input type="text" name="email" value="<%= usuario.getEmail() %>" placeholder="Email" required>
-			<br>
-			<input type="submit" value="Editar">
-			<input type="reset"  value="Limpar">
+			<div class="input-group my-2">
+				<span class="input-group-text">admin</span>
+				<input class="form-control"  type="text" name="login" value="<%= usuario.getLogin() %>" placeholder="Login" required>
+			</div>
+			<div class="input-group my-2">
+				<span class="input-group-text">******</span>
+				<input class="form-control"  type="password" name="senha" value="<%= usuario.getSenha() %>" placeholder="Senha" required>
+			</div>
+			<div class="input-group my-2">
+				<span class="input-group-text">João Silva</span>
+				<input class="form-control"  type="text" name="nome" value="<%= usuario.getNome() %>" placeholder="Nome" required>
+			</div>
+			<div class="input-group my-2">
+				<span class="input-group-text">j@gmail.com</span>
+				<input class="form-control"  type="text" name="email" value="<%= usuario.getEmail() %>" placeholder="Email" required>
+			</div>
+			<div class="my-2">
+				<input class="btn btn-primary  text-decoration none link-light" type="submit" value="Editar">
+				<input class="btn btn-primary  text-decoration none link-light" type="reset" value="Limpar">
+			</div>
 		</form>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

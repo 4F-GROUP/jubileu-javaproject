@@ -37,7 +37,7 @@
 				</div>
 			</form>
 		</div>
-		<table>
+		<table class="table table-hover">
 			<thead>
 				<tr>
 					<th>Código</th>
@@ -61,8 +61,8 @@
 					<td><%= u.getNome() %></td>
 					<td><%= u.getEmail() %></td>
 					<td>
-						<a href="IniciarAlterarUsuario?id=<%= u.getCod_usuario()%>">Alterar</a> 
-						<a href="ExcluirUsuario?id=<%= u.getCod_usuario()%>" onclick="return confirm('Deseja realmente excluir esse registro?');">Excluir</a>
+						<a  class="btn btn-primary btn-sm text-decoration none link-light" href="IniciarAlterarUsuario?id=<%= u.getCod_usuario()%>">Alterar</a> 
+						<a   class="btn btn-primary btn-sm text-decoration none link-light" href="ExcluirUsuario?id=<%= u.getCod_usuario()%>" onclick="return confirm('Deseja realmente excluir esse registro?');">Excluir</a>
 					</td>
 				</tr>
 				<% } %>
