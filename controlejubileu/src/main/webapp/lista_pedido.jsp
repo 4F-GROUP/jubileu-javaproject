@@ -7,20 +7,16 @@
 <meta charset="ISO-8859-1">
 <title>Jubileu</title>
 </head>
-<body class ="bg-light">
+<body class="bg-light">
 	<div class="container my-2">
-		<div class="my-2 p-2">
-			<h1 class="display-3">Jubileu Camisas</h1>
+		<div class="row ">
+			<a href="index.jsp" class="btn btn-primary text-decoration none link-light col align-self-start">Voltar a página anterior</a>
+			<a href="#" class=" col align-self-center"></a>
+			<a href="#" class=" col align-self-center"></a>
+			<a href="#" class=" col align-self-center"></a>
+			<a href="#" class=" col align-self-center"></a>
 		</div>
-		<br>
-		<div class= "navbar " style="background-color: #e3f2fd;">
-			<a href="lista_usuario.jsp" class="link-dark text-decoration-none fs-3 mx-3">Usuário</a>
-			<a href="lista_cliente.jsp" class="link-dark text-decoration-none fs-3 mx-3"> Cliente</a>
-			<a href="lista_fornecedor.jsp" class="link-dark text-decoration-none fs-3 mx-3">Fornecedor</a>
-			<a href="lista_produto.jsp" class="link-dark text-decoration-none fs-3 mx-3">Produto</a>
-			<a href="lista_pedido.jsp" class="link-dark text-decoration-none fs-3 mx-3">Pedido</a>
-		</div>
-		
+		<h1 class="display-5 my-2">Meus Pedidos</h1>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
