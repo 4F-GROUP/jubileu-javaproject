@@ -41,7 +41,7 @@
 				<tr>
 					<th>Código</th>
 					<th>Nome</th>
-					<th>Sub Categoria</th>
+					<th>Código Subcategoria</th>
 					<th>Ações</th>
 				</tr>
 			</thead>

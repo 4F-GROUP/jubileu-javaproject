@@ -2,8 +2,8 @@ package br.com.jubileu.controlejubileu.controller;
 
 import java.io.IOException;
 
-import br.com.jubileu.controlejubileu.model.dao.UsuarioDao;
-import br.com.jubileu.controlejubileu.model.entidade.Usuario;
+import br.com.jubileu.controlejubileu.model.dao.CategoriaDao;
+import br.com.jubileu.controlejubileu.model.entidade.Categoria;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -11,15 +11,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class IniciarAlterarUsuario
+ * Servlet implementation class IniciarAlterarCategoria
  */
-public class IniciarAlterarUsuario extends HttpServlet {
+public class IniciarAlterarCategoria extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IniciarAlterarUsuario() {
+    public IniciarAlterarCategoria() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,11 +36,11 @@ public class IniciarAlterarUsuario extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		UsuarioDao dao = new UsuarioDao();
-		Usuario u = dao.buscar(id);
-		request.setAttribute("usuario", u);
-		RequestDispatcher rd = request.getRequestDispatcher("editar_usuario.jsp");
-		rd.forward(request, response);
+		CategoriaDao dao = new CategoriaDao();
+		Categoria c = dao.buscar(id);
+		request.setAttribute("categoria", c);
+		RequestDispatcher rd = request.getRequestDispatcher("editar_categoria.jsp");
+		rd.forward(request,response);
 	}
 
 	/**

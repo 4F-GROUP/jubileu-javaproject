@@ -1,25 +1,25 @@
 package br.com.jubileu.controlejubileu.controller;
 
-import java.io.IOException;
-
-import br.com.jubileu.controlejubileu.model.dao.UsuarioDao;
-import br.com.jubileu.controlejubileu.model.entidade.Usuario;
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+import br.com.jubileu.controlejubileu.model.dao.CategoriaDao;
+import br.com.jubileu.controlejubileu.model.entidade.Categoria;
 
 /**
- * Servlet implementation class IniciarAlterarUsuario
+ * Servlet implementation class IncluirCategoria
  */
-public class IniciarAlterarUsuario extends HttpServlet {
+public class IncluirCategoria extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IniciarAlterarUsuario() {
+    public IncluirCategoria() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,18 +29,7 @@ public class IniciarAlterarUsuario extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		long id = 0;
-		try {
-			id = Long.parseLong(request.getParameter("id"));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		UsuarioDao dao = new UsuarioDao();
-		Usuario u = dao.buscar(id);
-		request.setAttribute("usuario", u);
-		RequestDispatcher rd = request.getRequestDispatcher("editar_usuario.jsp");
-		rd.forward(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -48,7 +37,18 @@ public class IniciarAlterarUsuario extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		Long cod_categoria = Long.parseLong(request.getParameter("cod_categoria"));
+		String nome = request.getParameter("nome");
+		Long cod_categoriapai = Long.parseLong(request.getParameter("cod_categoriapai"));
+		
+		Categoria c =  new Categoria();
+		c.setCod_categoria(cod_categoria);
+		c.setNome(nome);
+		c.setCod_categoriapai(cod_categoriapai);
+		
+		CategoriaDao dao = new CategoriaDao();
+		boolean retorno = dao.incluir(c);
+		response.sendRedirect("lista_categoria.jsp");
 	}
 
 }

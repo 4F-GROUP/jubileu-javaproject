@@ -20,24 +20,24 @@
 			<a href="#" class=" col align-self-center"></a>
 		</div>
 		<h1 class="display-5 my-2">Formulário de Cadastro</h1>
-		<form method="post" action="IncluirUsuario" >
-				<div class="input-group my-2">
-					<span class="input-group-text">123</span>
-					<input class="form-control" type="number" name="cod_categoria" placeholder="123" required>
-				</div>
-				<div class="input-group my-2">
-					<span class="input-group-text">Nome</span>
-					<input class="form-control"type="text" name="nome" placeholder="Flamengo" required>
-				</div>
-				<div class="input-group my-2">
-					<span class="input-group-text">Sub Categoria</span>
-					<input class="form-control" type="password" name="cod_categoriapai" placeholder="Jaquetas" required>
-				</div>
-				<div class="my-2">
-					<input class="btn btn-primary  text-decoration none link-light" type="submit" value="Ok">
-					<input class="btn btn-primary  text-decoration none link-light" type="reset" value="Limpar">
-				</div>
-			</form>
+		<form method="post" action="IncluirCategoria" >
+			<div class="input-group my-2">
+				<span class="input-group-text">123</span>
+				<input class="form-control" type="number" name="cod_categoria" placeholder="123" required>
+			</div>
+			<div class="input-group my-2">
+				<span class="input-group-text">Nome</span>
+				<input class="form-control"type="text" name="nome" placeholder="Flamengo" required>
+			</div>
+			<div class="input-group my-2">
+				<span class="input-group-text">Sub Categoria</span>
+				<input class="form-control" type="number" name="cod_categoriapai" placeholder="123" required>
+			</div>
+			<div class="my-2">
+				<input class="btn btn-primary  text-decoration none link-light" type="submit" value="Ok">
+				<input class="btn btn-primary  text-decoration none link-light" type="reset" value="Limpar">
+			</div>
+		</form>
 	</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

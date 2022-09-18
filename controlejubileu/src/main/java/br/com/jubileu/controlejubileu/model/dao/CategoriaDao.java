@@ -11,7 +11,7 @@ public class CategoriaDao extends Conexao{
 	
 	public boolean incluir(Categoria categoria) {
 		boolean ok = false;
-		String sql = "insert into categoria (cod_categoria, nome, cod_categoriapai) values (?,?,?)";
+		String sql = "insert into categoria (cod_categoria, nome, cod_categpai) values (?,?,?)";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
 			ps.setLong(1, categoria.getCod_categoria());
@@ -38,8 +38,8 @@ public class CategoriaDao extends Conexao{
 			while(rs.next()) {
 				c = new Categoria();
 				c.setCod_categoria(rs.getLong("cod_categoria"));
-				c.setNome(rs.getString("login"));
-				c.setCod_categoriapai(rs.getLong("cod_categoriapai"));
+				c.setNome(rs.getString("nome"));
+				c.setCod_categoriapai(rs.getLong("cod_categpai"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -60,7 +60,7 @@ public class CategoriaDao extends Conexao{
 				c = new Categoria();
 				c.setCod_categoria(rs.getLong("cod_categoria"));
 				c.setNome(rs.getString("nome"));
-				c.setCod_categoriapai(rs.getLong("cod_categoriapai"));
+				c.setCod_categoriapai(rs.getLong("cod_categpai"));
 			}
 ;		} catch(Exception e){
 			e.printStackTrace();
@@ -72,12 +72,12 @@ public class CategoriaDao extends Conexao{
 	
 	public boolean alterar(Categoria c) {
 		boolean ok = true;
-		String sql = "update categoria set nome = ?, cod_categoriapai = ?  where cod_categoriapai = ?";
+		String sql = "update categoria set nome = ?, cod_categpai = ?  where cod_categoria = ?";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
-			ps.setLong(1, c.getCod_categoria());
-			ps.setString(4, c.getNome());
-			ps.setLong(5, c.getCod_categoriapai());
+			ps.setString(1, c.getNome());
+			ps.setLong(2, c.getCod_categoriapai());
+			ps.setLong(3, c.getCod_categoria());
 			ps.execute();
 		} catch(Exception e) {
 			e.printStackTrace();
