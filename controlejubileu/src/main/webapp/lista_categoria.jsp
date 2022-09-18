@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="br.com.jubileu.controlejubileu.model.dao.ProdutoDao" %>
-<%@ page import="br.com.jubileu.controlejubileu.model.entidade.Produto" %>
+<%@ page import="br.com.jubileu.controlejubileu.model.dao.CategoriaDao" %>
+<%@ page import="br.com.jubileu.controlejubileu.model.entidade.Categoria" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.text.DecimalFormat" %>
-<%@ page import="java.text.SimpleDateFormat" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,9 +17,9 @@
 			<a href="#" class=" col align-self-center"></a>
 			<a href="#" class=" col align-self-center"></a>
 			<a href="#" class=" col align-self-center"></a>
-			<a href="incluir_produto.jsp" class="btn btn-primary text-decoration none link-light col align-self-end">Cadastro de Produtos</a>
+			<a href="incluir_categoria.jsp" class="btn btn-primary text-decoration none link-light col align-self-end">Cadastro de Categorias</a>
 		</div>
-		<h1 class="display-5 my-2">Consultar os Produtos</h1>
+		<h1 class="display-5 my-2">Consultar as Categorias</h1>
 		<%
 			String nomeBusca = "";
 			if(request.getParameter("nomeBusca")!= null){
@@ -29,7 +27,7 @@
 			}
 		%>
 		<div class="my-3">
-			<form method="post" action="lista_produto.jsp" class="row g-3">
+			<form method="post" action="lista_categoria.jsp" class="row g-3">
 				<div class="col-auto">
 					<input type="text" class="form-control " placeholder="Pesquise um código" name="nomeBusca" value="<%=nomeBusca%>"/>
 				</div>
@@ -42,42 +40,24 @@
 			<thead>
 				<tr>
 					<th>Código</th>
-					<th>Categoria</th>
-					<th>Fornecedor</th>
 					<th>Nome</th>
-					<th>Descrição</th>
-					<th>Detalhes</th>
-					<th>Marca</th>
-					<th>Imagem</th>
-					<th>Miniatura</th>
-					<th>Unidade</th>
-					<th>Valor Unitário</th>
-					<th>Estoque</th>
+					<th>Sub Categoria</th>
 					<th>Ações</th>
 				</tr>
 			</thead>
 			<tbody>
 			<%
-				ProdutoDao dao = new ProdutoDao();
-				List<Produto> produto = dao.listar();
-				for (Produto p: produto){
+				CategoriaDao dao = new CategoriaDao();
+				List<Categoria> categoria = dao.listar(nomeBusca);
+				for (Categoria c: categoria){
 			%>
 				<tr>
-					<td><%= p.getCod_produto() %></td>
-					<td><%= p.getCod_categoria().getCod_categoria() %></td>
-					<td><%= p.getCod_fornecedor().getCod_fornecedor() %></td>
-					<td><%= p.getNome() %></td>
-					<td><%= p.getDescricao() %></td>
-					<td><%= p.getDetalhes() %></td>
-					<td><%= p.getMarca() %></td>
-					<td><%= p.getImagem() %></td>
-					<td><%= p.getMiniatura() %></td>
-					<td><%= p.getUnidade() %></td>
-					<td><%= p.getValor_unit() %></td>
-					<td><%= p.getEstoque() %></td>
+					<td><%= c.getCod_categoria() %></td>
+					<td><%= c.getNome() %></td>
+					<td><%= c.getCod_categoriapai() %></td>
 					<td>
-						<a  class="btn btn-primary btn-sm text-decoration none link-light" href="IniciarAlterarProduto?id=<%= p.getCod_produto()%>">Alterar</a> 
-						<a   class="btn btn-primary btn-sm text-decoration none link-light" href="ExcluirProduto?id=<%= p.getCod_produto()%>" onclick="return confirm('Deseja realmente excluir esse registro?');">Excluir</a>
+						<a  class="btn btn-primary btn-sm text-decoration none link-light" href="IniciarAlterarCategoria?id=<%= c.getCod_categoria()%>">Alterar</a> 
+						<a   class="btn btn-primary btn-sm text-decoration none link-light" href="ExcluirCategoria?id=<%= c.getCod_categoria()%>" onclick="return confirm('Deseja realmente excluir esse registro?');">Excluir</a>
 					</td>
 				</tr>
 				<% } %>

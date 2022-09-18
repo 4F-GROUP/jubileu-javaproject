@@ -25,27 +25,27 @@
 		<form method="post" action="AlterarFornecedor">
 			<input type="text" name="id" value="<%= fornecedor.getCod_fornecedor() %>" readonly>
 			<div class="input-group my-2">
-				<span class="input-group-text">Exemplo Ltda</span>
+				<span class="input-group-text">Razão Social</span>
 				<input class="form-control" type="text" name="razao_social" value="<%= fornecedor.getRazao_social() %>" placeholder="Razão Social" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text">Exemplo</span>
+				<span class="input-group-text">Nome Fantasia</span>
 				<input class="form-control" type="text" name="nome_fantasia" value="<%= fornecedor.getNome_fantasia() %>"  placeholder="Nome Fantasia" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text">123</span>
+				<span class="input-group-text">CNPJ</span>
 				<input class="form-control" type="number" name="cnpj" value="<%= fornecedor.getCnpj() %>" placeholder="CNPJ" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text">Rua Feira</span>
+				<span class="input-group-text">Endereço</span>
 				<input class="form-control" type="text" name="endereco" value="<%= fornecedor.getEndereco() %>" placeholder="Endereço" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text">123</span>
+				<span class="input-group-text">Número</span>
 				<input class="form-control" type="number" name="numero"  value="<%= fornecedor.getNumero() %>"placeholder="Número" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text">Quadra B</span>
+				<span class="input-group-text">Complemento</span>
 				<input class="form-control" type="text" name="complemento" value="<%= fornecedor.getComplemento() %>" placeholder="Complemento" required>
 			</div>
 			<div class="input-group my-2">
@@ -53,7 +53,7 @@
 				<input class="form-control" type="text" name="bairro"  value="<%= fornecedor.getBairro() %>" placeholder="Bairro" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text">123</span>
+				<span class="input-group-text">CEP</span>
 				<input class="form-control" type="number" name="cep" value="<%= fornecedor.getCep() %>" placeholder="CEP" required>
 			</div>
 			<div class="input-group my-2">

@@ -19,51 +19,51 @@
 		<h1 class="display-5 my-2">Formulário de Cadastro</h1>
 		<form method="post" action="IncluirFornecedor">
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Código</span>
 				<input class="form-control" type="number" name="cod_fornecedor" placeholder="Código" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Razão Social</span>
 				<input class="form-control" type="text" name="razao_social" placeholder="Razão Social" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Nome Fantasia</span>
 				<input class="form-control" type="text" name="nome_fantasia" placeholder="Nome Fantasia" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">CNPJ</span>
 				<input class="form-control" type="number" name="cnpj" placeholder="CNPJ" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Endereço</span>
 				<input class="form-control" type="text" name="endereco" placeholder="Endereço" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Número</span>
 				<input class="form-control" type="number" name="numero" placeholder="Número" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Complemento</span>
 				<input class="form-control" type="text" name="complemento" placeholder="Complemento" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Cep</span>
 				<input class="form-control" type="text" name="bairro" placeholder="Bairro" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">CEP</span>
 				<input class="form-control" type="number" name="cep" placeholder="CEP" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Cidade</span>
 				<input class="form-control" type="text" name="cidade" placeholder="Cidade" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Estado</span>
 				<input class="form-control" type="text" name="estado" placeholder="Estado" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text"></span>
+				<span class="input-group-text">Telefone</span>
 				<input class="form-control" type="text" name="telefone" placeholder="Telefone" required>
 			</div>
 			<div class="my-2">

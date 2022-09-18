@@ -12,10 +12,10 @@
 		<div class="my-2 p-2">
 			<h1 class="display-3">Jubileu Camisas</h1>
 		</div>
-		<br>
 		<div class= "navbar " style="background-color: #e3f2fd;">
 			<a href="lista_usuario.jsp" class="link-dark text-decoration-none fs-3 mx-3">Usuário</a>
 			<a href="lista_cliente.jsp" class="link-dark text-decoration-none fs-3 mx-3"> Cliente</a>
+			<a href="lista_categoria.jsp" class="link-dark text-decoration-none fs-3 mx-3"> Categoria</a>
 			<a href="lista_fornecedor.jsp" class="link-dark text-decoration-none fs-3 mx-3">Fornecedor</a>
 			<a href="lista_produto.jsp" class="link-dark text-decoration-none fs-3 mx-3">Produto</a>
 			<a href="lista_pedido.jsp" class="link-dark text-decoration-none fs-3 mx-3">Pedido</a>
