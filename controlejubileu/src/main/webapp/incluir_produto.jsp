@@ -83,7 +83,7 @@
 			</div>
 			<div class="input-group my-2">
 				<span class="input-group-text">Valor Unitário</span>
-				<input class="form-control" type="number" name="valor_unit" placeholder="120,00" required>
+				<input class="form-control" type="number" name="valor_unit" placeholder="120,00" step="0.01" required>
 			</div>
 			<div class="input-group my-2">
 				<span class="input-group-text">Estoque</span>
