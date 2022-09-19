@@ -47,7 +47,7 @@
 				<input class="form-control" type="text" name="complemento" placeholder="Complemento" required>
 			</div>
 			<div class="input-group my-2">
-				<span class="input-group-text">Cep</span>
+				<span class="input-group-text">Bairro</span>
 				<input class="form-control" type="text" name="bairro" placeholder="Bairro" required>
 			</div>
 			<div class="input-group my-2">

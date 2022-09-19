@@ -1,11 +1,14 @@
 package br.com.jubileu.controlejubileu.controller;
 
+import java.io.IOException;
+
+import br.com.jubileu.controlejubileu.model.dao.ProdutoDao;
+import br.com.jubileu.controlejubileu.model.entidade.Produto;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 /**
  * Servlet implementation class IniciarAlterarProduto
@@ -26,7 +29,18 @@ public class IniciarAlterarProduto extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		long id = 0;
+		try {
+			id = Long.parseLong(request.getParameter("id"));
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		ProdutoDao dao = new ProdutoDao();
+		Produto p = dao.buscar(id);
+		request.setAttribute("produto", p);
+		RequestDispatcher rd = request.getRequestDispatcher("editar_produto.jsp");
+		rd.forward(request, response);
 	}
 
 	/**

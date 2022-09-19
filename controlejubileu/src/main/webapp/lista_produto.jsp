@@ -59,7 +59,7 @@
 			<tbody>
 			<%
 				ProdutoDao dao = new ProdutoDao();
-				List<Produto> produto = dao.listar();
+				List<Produto> produto = dao.listar(nomeBusca);
 				for (Produto p: produto){
 			%>
 				<tr>

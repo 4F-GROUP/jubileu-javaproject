@@ -52,19 +52,6 @@ public class IncluirProduto extends HttpServlet {
 		Double valor_unit = Double.parseDouble(request.getParameter("valor_unit"));
 		Long estoque = Long.parseLong(request.getParameter("estoque"));
 		
-		System.out.println("cod_produto:"+cod_produto);
-		System.out.println("cod_categoria"+cod_categoria);
-		System.out.println("cod_fornecedor"+cod_fornecedor);
-		System.out.println("nome"+nome);
-		System.out.println("descricao"+descricao);
-		System.out.println("detalhes"+detalhes);
-		System.out.println("marca"+marca);
-		System.out.println("imagem"+imagem);
-		System.out.println("miniatura"+miniatura);
-		System.out.println("unidade"+unidade);
-		System.out.println("valor_unit"+valor_unit);
-		System.out.println("estoque"+estoque);
-		
 		Categoria c = new Categoria();
 		try {
 			c.setCod_categoria(Long.parseLong(cod_categoria));

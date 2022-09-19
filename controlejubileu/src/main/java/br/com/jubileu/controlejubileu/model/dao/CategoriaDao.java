@@ -40,6 +40,7 @@ public class CategoriaDao extends Conexao{
 				c.setCod_categoria(rs.getLong("cod_categoria"));
 				c.setNome(rs.getString("nome"));
 				c.setCod_categoriapai(rs.getLong("cod_categpai"));
+				lista.add(c);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

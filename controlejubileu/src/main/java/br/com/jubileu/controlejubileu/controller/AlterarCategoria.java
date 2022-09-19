@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import br.com.jubileu.controlejubileu.model.dao.CategoriaDao;
 import br.com.jubileu.controlejubileu.model.entidade.Categoria;
 
 /**
@@ -45,6 +46,9 @@ public class AlterarCategoria extends HttpServlet {
 		c.setNome(nome);
 		c.setCod_categoriapai(cod_categoriapai);
 		
+		CategoriaDao dao = new CategoriaDao();
+		boolean retorno = dao.alterar(c);
+		response.sendRedirect("lista_categoria.jsp");
 		
 	}
 

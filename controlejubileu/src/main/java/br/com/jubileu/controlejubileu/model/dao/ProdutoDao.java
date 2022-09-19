@@ -36,7 +36,7 @@ public class ProdutoDao extends Conexao {
 		return ok;
 	}
 	
-	public List<Produto> listar(){
+	public List<Produto> listar(String nomeBusca){
 		List<Produto> produto = new ArrayList<Produto>();
 		String sql = "select p.*, c.cod_categoria as cod_categoria, f.cod_fornecedor as cod_fornecedor from produto p inner join categoria c on c.cod_categoria = p.cod_categoria inner join fornecedor f on f.cod_fornecedor = p.cod_fornecedor order by p.cod_produto";
 		try {
@@ -48,6 +48,12 @@ public class ProdutoDao extends Conexao {
 			while(rs.next()) {
 				p = new Produto();
 				p.setCod_produto(rs.getLong("cod_produto"));
+				c = new Categoria();
+				c.setCod_categoria(rs.getLong("cod_categoria"));
+				p.setCod_categoria(c);
+				f = new Fornecedor();
+				f.setCod_fornecedor(rs.getLong("cod_fornecedor"));
+				p.setCod_fornecedor(f);
 				p.setNome(rs.getString("nome"));
 				p.setDescricao(rs.getString("descricao"));
 				p.setDetalhes(rs.getString("detalhes"));
@@ -57,14 +63,7 @@ public class ProdutoDao extends Conexao {
 				p.setUnidade(rs.getLong("unidade"));
 				p.setValor_unit(rs.getDouble("valor_unit"));
 				p.setEstoque(rs.getLong("estoque"));
-				
-				c = new Categoria();
-				c.setCod_categoria(rs.getLong("cod_categoria"));
-				p.setCod_categoria(c);
-				
-				f = new Fornecedor();
-				f.setCod_fornecedor(rs.getLong("cod_fornecedor"));
-				p.setCod_fornecedor(f);
+				produto.add(p);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

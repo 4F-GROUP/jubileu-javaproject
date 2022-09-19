@@ -41,7 +41,7 @@
 				<tr>
 					<th>Código</th>
 					<th>Nome</th>
-					<th>Código Subcategoria</th>
+					<th>Subcategoria</th>
 					<th>Ações</th>
 				</tr>
 			</thead>
@@ -50,6 +50,7 @@
 				CategoriaDao dao = new CategoriaDao();
 				List<Categoria> categoria = dao.listar(nomeBusca);
 				for (Categoria c: categoria){
+					
 			%>
 				<tr>
 					<td><%= c.getCod_categoria() %></td>

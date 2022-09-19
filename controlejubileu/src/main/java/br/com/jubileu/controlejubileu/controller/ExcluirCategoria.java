@@ -37,7 +37,7 @@ public class ExcluirCategoria extends HttpServlet {
 		
 		CategoriaDao dao = new CategoriaDao();
 		boolean retorno = dao.excluir(id);
-		response.sendRedirect("lista_categoria");
+		response.sendRedirect("lista_categoria.jsp");
 	}
 
 	/**
