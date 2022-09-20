@@ -41,7 +41,7 @@ public class IncluirProduto extends HttpServlet {
 		String nome = request.getParameter("nome");
 		String descricao = request.getParameter("descricao");
 		String detalhes = request.getParameter("detalhes");
-		String marca = request.getParameter("detalhes");
+		String marca = request.getParameter("marca");
 		String imagem = request.getParameter("imagem");
 		String miniatura = request.getParameter("miniatura");
 		Long unidade = Long.parseLong(request.getParameter("unidade"));

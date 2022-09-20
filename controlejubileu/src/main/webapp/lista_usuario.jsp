@@ -18,7 +18,7 @@
 				<a href="#" class=" col align-self-center"></a>
 				<a href="#" class=" col align-self-center"></a>
 				<a href="#" class=" col align-self-center"></a>
-				<a href="incluir_usuario.jsp" class="btn btn-primary text-decoration none link-light col align-self-end">Cadastro de Clientes</a>
+				<a href="incluir_usuario.jsp" class="btn btn-primary text-decoration none link-light col align-self-end">Cadastro de Usuários</a>
 			</div>
 		<h1 class="display-5 my-2">Consultar os Usuários</h1>
 		<%

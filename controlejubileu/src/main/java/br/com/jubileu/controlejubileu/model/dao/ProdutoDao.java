@@ -8,6 +8,7 @@ import java.util.List;
 import br.com.jubileu.controlejubileu.model.entidade.Produto;
 
 public class ProdutoDao extends Conexao {
+	
 	public boolean incluir (Produto produto) {
 		boolean ok = false;
 		String sql = "insert into produto (cod_produto, nome, descricao, detalhes, marca, imagem, miniatura, unidade, valor_unit, estoque) values (?,?,?,?,?,?,?,?,?,?)";
@@ -26,6 +27,7 @@ public class ProdutoDao extends Conexao {
 			ok= ps.execute();
 		} catch (Exception e) {
 			e.printStackTrace();
+			ok = false;
 		} finally {
 			fecharConexao();
 		}
@@ -33,12 +35,13 @@ public class ProdutoDao extends Conexao {
 	}
 	
 	public List<Produto> listar(String nomeBusca){
-		List<Produto> produto = new ArrayList<Produto>();
-		String sql = "select * from produto where cod_produto like ? order by cod_produto ";
+		List<Produto> lista = new ArrayList<Produto>();
+		String sql = "select * from produto where cod_produto like ? order by cod_produto";
 		try {
 			PreparedStatement ps = criarConexao().prepareStatement(sql);
+			ps.setString(1, "%"+nomeBusca+"%");
 			ResultSet rs = ps.executeQuery();
-			Produto p = null;
+			Produto p;
 			while(rs.next()) {
 				p = new Produto();
 				p.setCod_produto(rs.getLong("cod_produto"));
@@ -51,14 +54,14 @@ public class ProdutoDao extends Conexao {
 				p.setUnidade(rs.getLong("unidade"));
 				p.setValor_unit(rs.getDouble("valor_unit"));
 				p.setEstoque(rs.getLong("estoque"));
-				produto.add(p);
+				lista.add(p);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			fecharConexao();
 		}
-		return produto;
+		return lista;
 	}
 	
 	public Produto buscar (long id) {
@@ -103,6 +106,7 @@ public class ProdutoDao extends Conexao {
 			ps.setLong(7, p.getUnidade());
 			ps.setDouble(8, p.getValor_unit());
 			ps.setLong(9, p.getEstoque());
+			ps.setLong(10, p.getCod_produto());
 			ps.execute();
 		} catch (Exception e) {
 			e.printStackTrace();

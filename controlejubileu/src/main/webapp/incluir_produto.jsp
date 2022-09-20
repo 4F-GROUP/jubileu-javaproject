@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="br.com.jubileu.controlejubileu.model.dao.ProdutoDao" %>
-<%@ page import="br.com.jubileu.controlejubileu.model.entidade.Produto" %>
-<%@ page import="java.util.List" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +36,7 @@
 			</div>
 			<div class="input-group my-2">
 				<span class="input-group-text">Marca</span>
-				<input class="form-control" type="text" name="marca" placeholder="CRF" required>
+				<input class="form-control" type="text" name="marca" placeholder="Adidas" required>
 			</div>
 			<div class="input-group my-2">
 				<span class="input-group-text">Imagem</span>
