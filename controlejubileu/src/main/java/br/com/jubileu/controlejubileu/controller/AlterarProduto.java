@@ -2,6 +2,7 @@ package br.com.jubileu.controlejubileu.controller;
 
 import java.io.IOException;
 
+import br.com.jubileu.controlejubileu.model.dao.ProdutoDao;
 import br.com.jubileu.controlejubileu.model.entidade.Produto;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -34,9 +35,7 @@ public class AlterarProduto extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Long cod_produto = Long.parseLong(request.getParameter("cod_produto")); 
-		String cod_categoria = request.getParameter("cod_categoria");
-		String cod_fornecedor = request.getParameter("cod_fornecedor");
+		Long cod_produto = Long.parseLong(request.getParameter("id")); 
 		String nome = request.getParameter("nome");
 		String descricao = request.getParameter("descricao");
 		String detalhes = request.getParameter("detalhes");
@@ -48,7 +47,20 @@ public class AlterarProduto extends HttpServlet {
 		Long estoque = Long.parseLong(request.getParameter("estoque"));
 		
 		Produto p = new Produto();
+		p.setCod_produto(cod_produto);
+		p.setNome(nome);
+		p.setDescricao(descricao);
+		p.setDetalhes(detalhes);
+		p.setMarca(marca);
+		p.setImagem(imagem);
+		p.setMiniatura(miniatura);
+		p.setUnidade(unidade);
+		p.setValor_unit(valor_unit);
+		p.setEstoque(estoque);
 		
+		ProdutoDao dao = new ProdutoDao();
+		boolean retorn = dao.alterar(p);
+		response.sendRedirect("lista_produto.jsp");
 	}
 
 }

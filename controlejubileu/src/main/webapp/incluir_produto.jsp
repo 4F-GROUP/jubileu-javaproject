@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="br.com.jubileu.controlejubileu.model.dao.CategoriaDao" %>
-<%@ page import="br.com.jubileu.controlejubileu.model.entidade.Categoria" %>
-<%@ page import="br.com.jubileu.controlejubileu.model.dao.FornecedorDao" %>
-<%@ page import="br.com.jubileu.controlejubileu.model.entidade.Fornecedor" %>
+<%@ page import="br.com.jubileu.controlejubileu.model.dao.ProdutoDao" %>
+<%@ page import="br.com.jubileu.controlejubileu.model.entidade.Produto" %>
 <%@ page import="java.util.List" %>  
 <!DOCTYPE html>
 <html>
@@ -26,32 +24,6 @@
 			<div class="input-group my-2">
 				<span class="input-group-text">Código</span>
 				<input class="form-control" type="number" name="cod_produto" placeholder="123" required>
-			</div>
-			<div class="input-group my-2">
-				<span class="input-group-text">Categoria</span>
-				<select class="form-select" name="cod_categoria" required>
-				 	<option selected>Selecione um código</option>
-					 <%
-					 	CategoriaDao dao = new CategoriaDao();
-					 	List<Categoria> lista = dao.listar("");
-					 	for(Categoria c: lista){
-					 %>
-					<option value="<%= c.getCod_categoria() %>"><%= c.getCod_categoria() %></option>
-					<% } %>
-				</select>
-			</div>
-			<div class="input-group my-2">
-				<span class="input-group-text">Fornecedor</span>
-				<select class="form-select" name="cod_fornecedor" required>
-				 	<option selected>Selecione um código</option>
-					 <%
-					 	FornecedorDao fdao = new FornecedorDao();
-					 	List<Fornecedor> listar = fdao.listar("");
-					 	for(Fornecedor f: listar){
-					 %>
-					<option value="<%= f.getCod_fornecedor() %>"><%= f.getCod_fornecedor() %></option>
-					<% } %>
-				</select>
 			</div>
 			<div class="input-group my-2">
 				<span class="input-group-text">Nome</span>
@@ -87,7 +59,7 @@
 			</div>
 			<div class="input-group my-2">
 				<span class="input-group-text">Estoque</span>
-				<input class="form-control" type="number" name="valor_unit" placeholder="100" required>
+				<input class="form-control" type="number" name="estoque" placeholder="100" required>
 			</div>
 			<div class="my-2">
 				<input class="btn btn-primary  text-decoration none link-light" type="submit" value="Ok">

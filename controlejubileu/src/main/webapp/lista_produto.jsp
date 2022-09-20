@@ -42,8 +42,6 @@
 			<thead>
 				<tr>
 					<th>Código</th>
-					<th>Categoria</th>
-					<th>Fornecedor</th>
 					<th>Nome</th>
 					<th>Descrição</th>
 					<th>Detalhes</th>
@@ -64,8 +62,6 @@
 			%>
 				<tr>
 					<td><%= p.getCod_produto() %></td>
-					<td><%= p.getCod_categoria().getCod_categoria() %></td>
-					<td><%= p.getCod_fornecedor().getCod_fornecedor() %></td>
 					<td><%= p.getNome() %></td>
 					<td><%= p.getDescricao() %></td>
 					<td><%= p.getDetalhes() %></td>

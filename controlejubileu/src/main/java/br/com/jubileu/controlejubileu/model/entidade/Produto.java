@@ -2,8 +2,6 @@ package br.com.jubileu.controlejubileu.model.entidade;
 
 public class Produto {
 	private long cod_produto;
-	private Categoria cod_categoria;
-	private Fornecedor cod_fornecedor;
 	private String nome;
 	private String descricao;
 	private String detalhes;
@@ -17,8 +15,6 @@ public class Produto {
 	public Produto() {
 		super();
 		this.cod_produto = 0;
-		this.cod_categoria = new Categoria();
-		this.cod_fornecedor = new Fornecedor();
 		this.nome = "";
 		this.descricao = "";
 		this.detalhes = "";
@@ -30,13 +26,10 @@ public class Produto {
 		this.estoque = 0;
 	}
 
-	public Produto(long cod_produto, Categoria cod_categoria, Fornecedor cod_fornecedor, String nome, String descricao,
-			String detalhes, String marca, String imagem, String miniatura, long unidade, double valor_unit,
+	public Produto(long cod_produto, String nome, String descricao, String detalhes, String marca, String imagem, String miniatura, long unidade, double valor_unit,
 			long estoque) {
 		super();
 		this.cod_produto = cod_produto;
-		this.cod_categoria = cod_categoria;
-		this.cod_fornecedor = cod_fornecedor;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.detalhes = detalhes;
@@ -54,22 +47,6 @@ public class Produto {
 
 	public void setCod_produto(long cod_produto) {
 		this.cod_produto = cod_produto;
-	}
-
-	public Categoria getCod_categoria() {
-		return cod_categoria;
-	}
-
-	public void setCod_categoria(Categoria cod_categoria) {
-		this.cod_categoria = cod_categoria;
-	}
-
-	public Fornecedor getCod_fornecedor() {
-		return cod_fornecedor;
-	}
-
-	public void setCod_fornecedor(Fornecedor cod_fornecedor) {
-		this.cod_fornecedor = cod_fornecedor;
 	}
 
 	public String getNome() {

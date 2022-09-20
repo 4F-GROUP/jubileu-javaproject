@@ -8,8 +8,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import br.com.jubileu.controlejubileu.model.dao.ProdutoDao;
-import br.com.jubileu.controlejubileu.model.entidade.Categoria;
-import br.com.jubileu.controlejubileu.model.entidade.Fornecedor;
 import br.com.jubileu.controlejubileu.model.entidade.Produto;
 
 /**
@@ -40,8 +38,6 @@ public class IncluirProduto extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Long cod_produto = Long.parseLong(request.getParameter("cod_produto")); 
-		String cod_categoria = request.getParameter("cod_categoria");
-		String cod_fornecedor = request.getParameter("cod_fornecedor");
 		String nome = request.getParameter("nome");
 		String descricao = request.getParameter("descricao");
 		String detalhes = request.getParameter("detalhes");
@@ -52,24 +48,8 @@ public class IncluirProduto extends HttpServlet {
 		Double valor_unit = Double.parseDouble(request.getParameter("valor_unit"));
 		Long estoque = Long.parseLong(request.getParameter("estoque"));
 		
-		Categoria c = new Categoria();
-		try {
-			c.setCod_categoria(Long.parseLong(cod_categoria));
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		
-		Fornecedor f = new Fornecedor();
-		try {
-			f.setCod_fornecedor(Long.parseLong(cod_fornecedor));
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		
 		Produto p = new Produto();
 		p.setCod_produto(cod_produto);
-		p.setCod_categoria(c);
-		p.setCod_fornecedor(f);
 		p.setNome(nome);
 		p.setDescricao(descricao);
 		p.setDetalhes(detalhes);
