@@ -12,7 +12,7 @@
 <body class="bg-light">
 	<div class="container my-2">
 		<div class="row ">
-			<a href="lista_fornecedor.jsp" class="btn btn-primary text-decoration none link-light col align-self-start">Voltar a página anterior</a>
+			<a href="lista_fornecedor.jsp" class="btn btn-danger text-decoration none link-light col align-self-start">Voltar a página anterior</a>
 			<a href="#" class=" col align-self-center"></a>
 			<a href="#" class=" col align-self-center"></a>
 			<a href="#" class=" col align-self-center"></a>
@@ -23,7 +23,7 @@
 			Fornecedor fornecedor = (Fornecedor) request.getAttribute("fornecedor");
 		%>
 		<form method="post" action="AlterarFornecedor">
-			<input type="text" name="id" value="<%= fornecedor.getCod_fornecedor() %>" readonly>
+			<input type="hidden" name="id" value="<%= fornecedor.getCod_fornecedor() %>" readonly>
 			<div class="input-group my-2">
 				<span class="input-group-text">Razão Social</span>
 				<input class="form-control" type="text" name="razao_social" value="<%= fornecedor.getRazao_social() %>" placeholder="Razão Social" required>
@@ -69,8 +69,8 @@
 				<input class="form-control" type="text" name="telefone" value="<%= fornecedor.getTelefone() %>" placeholder="Telefone" required>
 			</div>
 			<div class="my-2">
-				<input class="btn btn-primary  text-decoration none link-light" type="submit" value="Editar">
-				<input class="btn btn-primary  text-decoration none link-light" type="reset" value="Limpar">
+				<input class="btn btn-danger  text-decoration none link-light" type="submit" value="Editar">
+				<input class="btn btn-danger  text-decoration none link-light" type="reset" value="Limpar">
 			</div>
 		</form>
 	</div>

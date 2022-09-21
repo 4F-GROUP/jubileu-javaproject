@@ -15,11 +15,11 @@
 <body class="bg-light">
 	<div class = "container my-2">
 		<div class="row ">
-			<a href="index.jsp" class="btn btn-primary text-decoration none link-light col align-self-start">Voltar a página anterior</a>
+			<a href="index.jsp" class="btn btn-danger text-decoration none link-light col align-self-start">Voltar a página anterior</a>
 			<a href="#" class=" col align-self-center"></a>
 			<a href="#" class=" col align-self-center"></a>
 			<a href="#" class=" col align-self-center"></a>
-			<a href="incluir_produto.jsp" class="btn btn-primary text-decoration none link-light col align-self-end">Cadastro de Produtos</a>
+			<a href="incluir_produto.jsp" class="btn btn-danger text-decoration none link-light col align-self-end">Cadastro de Produtos</a>
 		</div>
 		<h1 class="display-5 my-2">Consultar os Produtos</h1>
 		<%
@@ -34,7 +34,7 @@
 					<input type="text" class="form-control " placeholder="Pesquise um código" name="nomeBusca" value="<%=nomeBusca%>"/>
 				</div>
 				<div class="col-auto">
-					<input type="submit" value="Buscar" class="btn btn-primary link-light"/>
+					<input type="submit" value="Buscar" class="btn btn-danger link-light"/>
 				</div>
 			</form>
 		</div>
@@ -72,8 +72,8 @@
 					<td><%= p.getValor_unit() %></td>
 					<td><%= p.getEstoque() %></td>
 					<td>
-						<a  class="btn btn-primary btn-sm text-decoration none link-light" href="IniciarAlterarProduto?id=<%= p.getCod_produto()%>">Alterar</a> 
-						<a   class="btn btn-primary btn-sm text-decoration none link-light" href="ExcluirProduto?id=<%= p.getCod_produto()%>" onclick="return confirm('Deseja realmente excluir esse registro?');">Excluir</a>
+						<a  class="btn btn-danger btn-sm text-decoration none link-light" href="IniciarAlterarProduto?id=<%= p.getCod_produto()%>">Alterar</a> 
+						<a   class="btn btn-danger btn-sm text-decoration none link-light" href="ExcluirProduto?id=<%= p.getCod_produto()%>" onclick="return confirm('Deseja realmente excluir esse registro?');">Excluir</a>
 					</td>
 				</tr>
 				<% } %>

@@ -10,7 +10,7 @@
 <body class="bg-light">
 	<div class="container my-2">
 		<div class="row ">
-			<a href="lista_fornecedor.jsp" class="btn btn-primary text-decoration none link-light col align-self-start">Voltar a página anterior</a>
+			<a href="lista_fornecedor.jsp" class="btn btn-danger text-decoration none link-light col align-self-start">Voltar a página anterior</a>
 			<a href="#" class=" col align-self-center"></a>
 			<a href="#" class=" col align-self-center"></a>
 			<a href="#" class=" col align-self-center"></a>
@@ -67,8 +67,8 @@
 				<input class="form-control" type="text" name="telefone" placeholder="Telefone" required>
 			</div>
 			<div class="my-2">
-				<input class="btn btn-primary  text-decoration none link-light" type="submit" value="Ok">
-				<input class="btn btn-primary  text-decoration none link-light" type="reset" value="Limpar">
+				<input class="btn btn-danger  text-decoration none link-light" type="submit" value="Ok">
+				<input class="btn btn-danger  text-decoration none link-light" type="reset" value="Limpar">
 			</div>
 		</form>
 	</div>
