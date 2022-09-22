@@ -111,4 +111,27 @@ public class UsuarioDao extends Conexao{
 		}
 		return ok;
 	}
+	
+	public Usuario logar(String login, String senha) {
+		Usuario usr = null;
+		String sql = "select * from usuario where login = ? and senha = ?";
+		try {
+			PreparedStatement ps = criarConexao().prepareStatement(sql);
+			ps.setString(1, login);
+			ps.setString(2, senha);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()) {
+				usr = new Usuario();
+				usr.setCod_usuario(rs.getLong("cod_usuario"));
+				usr.setNome(rs.getString("nome"));
+				usr.setLogin(rs.getString("login"));
+				usr.setSenha(rs.getString("senha"));
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			fecharConexao();
+		}
+		return usr;
+	}
 }

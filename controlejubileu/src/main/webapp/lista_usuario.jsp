@@ -12,9 +12,10 @@
 <title>Jubileu</title>
 </head>
 <body class ="bg-light">
+	<jsp:include page="verificaSessao.jsp"></jsp:include>
 	<div class="container my-2">
 		<div class="row ">
-				<a href="index.jsp" class="btn btn-danger text-decoration none link-light col align-self-start">Voltar a página anterior</a>
+				<a href="sistema.jsp" class="btn btn-danger text-decoration none link-light col align-self-start">Voltar a página anterior</a>
 				<a href="#" class=" col align-self-center"></a>
 				<a href="#" class=" col align-self-center"></a>
 				<a href="#" class=" col align-self-center"></a>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="br.com.jubileu.controlejubileu.model.entidade.Usuario" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +39,10 @@
 </head>
 
 <body>
-
+	<jsp:include page="verificaSessao.jsp"></jsp:include>
+	<%
+		Usuario usuario = (Usuario) session.getAttribute("usuarioLogado");
+	%>
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -49,10 +53,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="lista_usuario.jsp" target="_blank">Usuário</a></li>
-          <li><a class="nav-link scrollto " href="lista_cliente.jsp" target="_blank">Cliente</a></li>
-          <li><a class="nav-link scrollto" href="lista_fornecedor.jsp"  target="_blank">Fornecedor</a></li>
-          <li><a class="nav-link scrollto " href="lista_produto.jsp"  target="_blank">Produto</a></li>
+          <li><a class="nav-link scrollto " href="lista_usuario.jsp" >Usuário</a></li>
+          <li><a class="nav-link scrollto " href="lista_cliente.jsp" >Cliente</a></li>
+          <li><a class="nav-link scrollto" href="lista_fornecedor.jsp"  >Fornecedor</a></li>
+          <li><a class="nav-link scrollto " href="lista_produto.jsp"  >Produto</a></li>
+          <li><a class="nav-link scrollto " href="LogoutServlet" >Sair</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -64,7 +69,7 @@
 	<!-- ======= Hero Section ======= -->
 	  <section id="hero" class="d-flex align-items-center">
 	    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-	      <h1>Bem-vindo(a),</h1>
+	      <h1>Bem-vindo(a)  <%= usuario.getNome() %>,</h1>
 	      <h2>você está dentro do sistema de cadastramento do e-commerce Jubileu.</h2>
 	    </div>
 	  </section><!-- End Hero -->
