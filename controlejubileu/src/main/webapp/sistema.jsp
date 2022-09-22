@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Jubileu Corp.</title>
+  <title>Jubileu</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -36,6 +38,7 @@
 </head>
 
 <body>
+
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -46,9 +49,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#">Login</a></li>
+          <li><a class="nav-link scrollto " href="lista_usuario.jsp" target="_blank">Usuário</a></li>
+          <li><a class="nav-link scrollto " href="lista_cliente.jsp" target="_blank">Cliente</a></li>
+          <li><a class="nav-link scrollto" href="lista_fornecedor.jsp"  target="_blank">Fornecedor</a></li>
+          <li><a class="nav-link scrollto " href="lista_produto.jsp"  target="_blank">Produto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -56,47 +60,15 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-      <h1>Bem-vindo(a),</h1>
-      <h2>ao sistema de cadastramento do e-commerce Jubileu.</h2>
-      <a href="#about" class="btn-get-started scrollto">Sobre o sistema</a>
-    </div>
-  </section><!-- End Hero -->
-
   <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
+	<!-- ======= Hero Section ======= -->
+	  <section id="hero" class="d-flex align-items-center">
+	    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+	      <h1>Bem-vindo(a),</h1>
+	      <h2>você está dentro do sistema de cadastramento do e-commerce Jubileu.</h2>
+	    </div>
+	  </section><!-- End Hero -->
+	  
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container">
@@ -107,7 +79,7 @@
             <div class="box">
               <span>01</span>
               <h4>Cadastre</h4>
-              <p>De forma fÃ¡cil e prÃ¡tica, em alguns segundos, vocÃª cadastras os itens.</p>
+              <p>De forma fácil e prática, em alguns segundos, você cadastras os itens.</p>
             </div>
           </div>
 
@@ -115,7 +87,7 @@
             <div class="box">
               <span>02</span>
               <h4>Consulte</h4>
-              <p>Utilizando o cÃ³digo do item vocÃª o localiza na tabela geral do sistema.</p>
+              <p>Utilizando o código do item você o localiza na tabela geral do sistema.</p>
             </div>
           </div>
 
@@ -123,7 +95,7 @@
             <div class="box">
               <span>03</span>
               <h4> Controle</h4>
-              <p>Gerencie os itens ao consultÃ¡-los, alterÃ¡-los e exclui-los quando quiser.</p>
+              <p>Gerencie os itens ao consultá-los, alterá-los e exclui-los quando quiser.</p>
             </div>
           </div>
 
@@ -131,6 +103,8 @@
 
       </div>
     </section><!-- End Why Us Section -->
+
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
